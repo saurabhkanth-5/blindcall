@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 /* ================================================================
    BLINDCALL — PORTFOLIO PROTOTYPE
@@ -345,7 +346,7 @@ const RESEARCH=[
 // ─── DEMO STEPS: each step maps to a screen ──────────────────
 const DEMO_STEPS = ["landing","auth","matching","waiting","call","postcall","analytics"];
 
-// ─── STEPPER ─────────────────────────────────────────────────
+// ─── STEPPER ───────────────��─────────────────────���───────────
 function Stepper({current,total}){
   return(
     <div className="stepper">
@@ -1171,6 +1172,7 @@ export default function App(){
           </div>
         </footer>
       </div>
+      <SpeedInsights />
     </>
   );
 }
