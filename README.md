@@ -1,81 +1,57 @@
-# BlindCall
+# BlindCall — Deploy in 5 Minutes
 
-A lightweight web app built with Vite.
+## Option A: Netlify (Drag & Drop — No CLI needed)
 
----
-
-## 🚀 Local Development
-
-Make sure Node.js is installed:  
-https://nodejs.org
-
-Then run:
-
+### Step 1 — Build on your computer
 ```bash
-npm install
-npm run dev
-```
+# Make sure Node.js is installed → nodejs.org
+# Open terminal, go to this folder
 
-App runs at:  
-http://localhost:5173
-
----
-
-## 📦 Build for Production
-
-```bash
 npm install
 npm run build
 ```
-
 This creates a `/dist` folder.
 
----
+### Step 2 — Deploy
+1. Go to **netlify.com** → sign up free
+2. On the dashboard click **"Add new site" → "Deploy manually"**
+3. **Drag your `/dist` folder** into the upload box
+4. Done. You get a live URL like `https://blindcall-abc123.netlify.app`
 
-## 🌍 Deployment Options
-
-### Option 1 — Netlify (Drag & Drop)
-
-1. Go to https://netlify.com
-2. Sign up / Log in
-3. Click **Add new site**
-4. Choose **Deploy manually**
-5. Drag the `/dist` folder into the upload box
-
-Done. You get a live `.netlify.app` URL.
+### Optional: Custom domain
+In Netlify → Site settings → Domain management → Add your domain.
 
 ---
 
-### Option 2 — Vercel (Recommended)
+## Option B: Vercel (Best for sharing portfolio links)
 
-1. Push code to GitHub
-2. Go to https://vercel.com
-3. Click **Add New Project**
-4. Import your GitHub repo
-5. Click Deploy
+```bash
+npm install
+npm install -g vercel
+vercel
+```
+Follow the prompts. Live in 30 seconds with a `vercel.app` URL.
 
+---
+
+## Option C: GitHub + Vercel (Auto-deploys on every save)
+
+```bash
+git init
+git add .
+git commit -m "blindcall prototype"
+gh repo create blindcall --public --push
+```
+Then go to vercel.com → Import GitHub repo → Deploy.
 Every `git push` auto-redeploys.
 
 ---
 
-## 🛠 Tech Stack
-
-- Vite
-- JavaScript
-- HTML / CSS
-
----
-
-## 📂 Project Structure
-
+## Local development
+```bash
+npm install
+npm run dev
+# Opens at http://localhost:5173
 ```
-src/
-index.html
-package.json
-vite.config.js
-vercel.json
-```
-
----
-
-Built for fast deployment and easy iteration.
+"# blindcall" 
+#
